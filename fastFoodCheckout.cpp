@@ -4,7 +4,7 @@
 //team collaboration
 
 #include<iostream>
-
+#include<iomanip>
 using namespace std;
 
 
@@ -50,7 +50,8 @@ void DisplayMenu(void){
     cout <<"Number 1 : Soda : $1.99" << endl;
     cout <<"Number 2 : Cheeseburger : $3.00" << endl;
     cout <<"Number 3:  Fries : $1.00" << endl; 
-    cout <<"Enter an item number 1, 2, 3. [ENTER 0 TO CHECKOUT]" << endl; 
+    cout <<"Enter an item number 1, 2, 3. [ENTER 0 TO CHECKOUT]" << endl;
+     
 }//ENDFUNC
 
 /*int checkout(checkprice){
@@ -67,7 +68,7 @@ int main(void)
 
     //VAR
     double price = 0;
-    int item;
+    int item, numItem;
 
     
 while(true){
@@ -86,24 +87,29 @@ while(true){
         cout <<"--->>> ";    
         cin >> item;
         
+        //Get num of items 
+        if (item != 0){ 
+            cout <<"Enter the number of items:" << endl;
+            cout <<"--->>> ";
+            cin >> numItem;
+        }
         
         if(item == 1){
         
-            price = price + 1.99;
+            price = numItem * (price + 1.99);
             
         }else if(item == 2){
 
 
-            price = price + 3.00;
+            price = numItem * (price + 3.00);
 
 
         }else if(item == 3){
 
 
-            price = price + 1.00;
+            price = numItem * (price + 1.00);
 
         }else if (item == 0){
-        
             break;
 
         }else{
@@ -115,9 +121,10 @@ while(true){
     }//ENDWHILE
 
     spacer();
-
-    cout <<"Total price is: [ $" << price << " ]" << endl;
-
+    
+    
+    cout <<"Total price is: [ $" << setprecision(2) << fixed << price << " ]" << endl;
+    cout <<"Thank you!!!" << endl;
     spacer();
 
     //checkout(price);
