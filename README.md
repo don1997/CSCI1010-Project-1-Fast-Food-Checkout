@@ -13,4 +13,7 @@ This program displays a menu and takes user input depending on their choice. The
 * If the options 1, 2, or 3 are selected.
 * Then another option will be displayed asking the user to enter the amount of the item they selected they want.
 * After the user has entered an amount. The user can then enter their next desired item or exit out and get their total. 
-* After the user has their total displayed the program is reset and ready for the next user. 
+* After the user has their total displayed the program is reset and ready for the next user.
+### WARNING
+If user enters character elements other than integers such as characters or strings. Use ctrl+c to terminate program.                                                     
+~                                                                                                                       
