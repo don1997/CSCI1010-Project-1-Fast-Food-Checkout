@@ -18,4 +18,4 @@ This program displays a menu and takes user input depending on their choice. The
 * After the user has their total displayed the program is reset and ready for the next user.
 
 ### WARNING
-If user enters character elements other than integers such as characters or strings. Use ctrl+c to terminate program. 
+If user enters elements other than integers such as characters or strings. Use ctrl+c to terminate program. 
