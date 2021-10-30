@@ -1,13 +1,13 @@
-//NOTE: Must continue loop for next customer after total is displayed.
-//algorithm design
-//user manual to instruct customers on how to use the system to order meals.
-//team collaboration
+//NAME: Donald McLaughlin
+//Assignment: Project 1
+//COURSE: CSCI 1010
+//SUMMARY: Fastfood checkout system.
 
 #include<iostream>
-#include<iomanip>
+#include<iomanip> //setprecision() and fixed
 using namespace std;
 
-
+//displays bar
 void formatter(void){
     
     int i;
@@ -20,6 +20,7 @@ void formatter(void){
     cout << endl;
 }//ENDFUNC
 
+//adds newlines
 void spacer(void){
 
     int i;
@@ -31,19 +32,7 @@ void spacer(void){
     }
 }//ENDFUNC
 
-void clearscr(void){
-
-
-    int i;
-
-    for(i = 0; i < 30; i++){
-
-        cout << endl;    
-
-    }
-
-}//ENDFUNC
-
+//displays menu of items with prices
 void DisplayMenu(void){
 
     cout <<"MENU" << endl;    
@@ -54,13 +43,7 @@ void DisplayMenu(void){
      
 }//ENDFUNC
 
-/*int checkout(checkprice){
-    double checkprice;
-    spacer();
-    cout <<"Total price is: [ $" << price << " ]" << endl;
-    spacer();
-}
-*/
+
 
 //MAIN 
 int main(void)
@@ -71,63 +54,63 @@ int main(void)
     int item, numItem;
 
     
-while(true){
-
     while(true){
+
+        while(true){
     
-       // clearscr();
-        formatter();
+            //clearscr();
+            formatter();
         
-        //MENU DISPLAY
-        DisplayMenu();
+            //MENU DISPLAY
+            DisplayMenu();
 
-        spacer();
+            spacer();
 
-        //INPUT DISPLAY
-        cout <<"--->>> ";    
-        cin >> item;
+            //INPUT DISPLAY
+            cout <<"--->>> ";    
+            cin >> item;
         
-        //Get num of items 
-        if (item != 0){ 
-            cout <<"Enter the number of items:" << endl;
-            cout <<"--->>> ";
-            cin >> numItem;
-        }
+            //Get num of items 
+            if (item != 0){ 
+                cout <<"Enter the number of items:" << endl;
+                cout <<"--->>> ";
+                cin >> numItem;
+            }
         
-        if(item == 1){
+            if(item == 1){
         
-            price = numItem * (price + 1.99);
+                price = numItem * (price + 1.99);
             
-        }else if(item == 2){
+            }else if(item == 2){
 
 
-            price = numItem * (price + 3.00);
+                price = numItem * (price + 3.00);
 
 
-        }else if(item == 3){
+            }else if(item == 3){
 
 
-            price = numItem * (price + 1.00);
+                price = numItem * (price + 1.00);
 
-        }else if (item == 0){
-            break;
+            }else if (item == 0){
+                break;
 
-        }else{
+            }else{
             
-            cout << "ERROR: Enter a valid input. MUST BE 1,2,3 or 0" << endl;
-        }
+                cout << "ERROR: Enter a valid input. MUST BE 1,2,3 or 0" << endl;
+            }
 
     
-    }//ENDWHILE
+        }//ENDWHILE
 
     spacer();
     
-    
+    //DISPLAY PRICE 
     cout <<"Total price is: [ $" << setprecision(2) << fixed << price << " ]" << endl;
     cout <<"Thank you!!!" << endl;
     spacer();
 
-    //checkout(price);
+    
     
     price = 0;    
 }//ENDWHILE 2

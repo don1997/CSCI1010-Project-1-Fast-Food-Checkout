@@ -1,5 +1,7 @@
 # CSCI1010-Project-1-Fast-Food-Checkout
 
+Link to project Github to view repository and instructions in markdown format: https://github.com/don1997/CSCI1010-Project-1-Fast-Food-Checkout 
+
 # Program Summary
 
 This program displays a menu and takes user input depending on their choice. The total price of the items selected is calculated and the next customer entry is ready to be entered in.
